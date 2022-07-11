@@ -1,4 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for, flash, redirect
+from forms import RegistrationForm
+from flask_behind_proxy import FlaskBehindProxy
+
 app = Flask(__name__)
 proxied = FlaskBehindProxy(app)
 app.config['SECRET_KEY'] = "cc9ec67d0a210d77f64f163b3a5d2707"
